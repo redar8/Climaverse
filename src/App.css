@@ -1,0 +1,123 @@
+/* Background & base layout */
+body {
+  background: linear-gradient(to bottom right, #1a1a40, #151515);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper for entire app */
+.climaverse-bg {
+  min-height: 100vh;
+}
+
+/* Search input glass-style */
+.search-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Main weather card (today) */
+.main-weather-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Reusable glass style card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hour and day cards */
+.small-hour-card, .small-day-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  color: white;
+  min-width: 80px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Placeholder text style */
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive image size */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.d-flex::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in Webkit browsers like Chrome/Safari */
+}
+
+.day-bg {
+  background: radial-gradient(at top left, #BE6D32 30%, #0C2E45 70%);
+} 
+
+.night-bg {
+  background: radial-gradient(at top left, #021a32 30%, #2c3e50 70%);
+}
+
+
+.hover-glow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.small-hour-card,
+.small-day-card {
+  min-width: 30px;
+}
+
+
+/* Hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Arrow button styles */
+.scroll-arrow {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.scroll-arrow:hover {
+  color: #ffcc70;
+}
+
+/* Container styling to align arrow + content */
+.scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Card hover effect */
+.small-hour-card:hover,
+.small-day-card:hover {
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
